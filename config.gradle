@@ -1,0 +1,5 @@
+ext{
+    other=[
+            "lottieVersion":"3.6.0"
+    ]
+}
