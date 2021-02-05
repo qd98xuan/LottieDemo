@@ -1,6 +1,7 @@
 package com.example.lottie
 
 import android.animation.Animator
+import android.animation.ValueAnimator
 import android.graphics.drawable.Animatable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,14 +13,46 @@ import com.airbnb.lottie.LottieComposition
 import com.airbnb.lottie.LottieCompositionFactory
 import com.airbnb.lottie.LottieListener
 import com.airbnb.lottie.OnCompositionLoadedListener
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     var lottieAnimationView:LottieAnimationView?=null
+    var lottieAnimationGive:LottieAnimationView?=null
     var heart:ImageView?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         lottieAnimationView = findViewById(R.id.lottie_layer_animation)
+//        lottieAnimationGive = findViewById(R.id.lottie_animation_give)
+//
+//        //使用封装
+//        var lottieAnimationView1 = LottieFactory.from(
+//            lottieAnimationGive!!,
+//            "give.json",
+//            this,
+//            object : LottieFactory.Companion.LottieFactoryCallback {
+//                override fun lottieUpdateListener(valueAnimator: ValueAnimator?) {
+//
+//                }
+//
+//                override fun lottieAnimationStartListener(animation: Animator?) {
+//
+//                }
+//
+//                override fun lottieAnimationEndListener(animation: Animator?) {
+//
+//                }
+//
+//                override fun lottieAnimationCancelListener(animation: Animator?) {
+//
+//                }
+//
+//                override fun lottieAnimationRepeatListener(animation: Animator?) {
+//                }
+//            })
+//        lottieAnimationView1.progress=0f
+//        lottieAnimationView1.playAnimation()
+
 
         //给lottie设置json动画文件
         LottieCompositionFactory.fromAsset(this,"love.json").addListener(LottieListener {
