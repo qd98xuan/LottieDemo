@@ -42,5 +42,13 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //动画库
     implementation "com.airbnb.android:lottie:$rootProject.ext.other.lottieVersion"
+    //lifecycle
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:$rootProject.ext.other.lifecycleVersion"
+    // alternatively, just ViewModel
+    implementation "android.arch.lifecycle:viewmodel:$rootProject.ext.other.lifecycleVersion"
+    // alternatively, just LiveData
+    implementation "android.arch.lifecycle:livedata:$rootProject.ext.other.lifecycleVersion"
 }

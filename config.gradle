@@ -1,5 +1,6 @@
 ext{
     other=[
-            "lottieVersion":"3.6.0"
+            "lottieVersion":"3.6.0",
+            "lifecycleVersion":"2.2.0"
     ]
 }

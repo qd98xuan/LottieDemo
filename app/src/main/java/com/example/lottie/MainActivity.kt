@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         lottieAnimationView = findViewById(R.id.lottie_layer_animation)
+        var user=User()
+        lifecycle.addObserver(user)
+
 //        lottieAnimationGive = findViewById(R.id.lottie_animation_give)
 //
 //        //使用封装
